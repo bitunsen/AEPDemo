@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "13646835-eac0-4ec2-bfdc-d971398242c9",
+		"name": "Sandox API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllSandboxes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{ACCESS_TOKEN}}",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "{{API_KEY}}",
+						"type": "text"
+					},
+					{
+						"key": "x-gw-ims-org-id",
+						"value": "{{IMS_ORG}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{PLATFORM_URL}}/data/foundation/sandbox-management/?&limit=3&offset=1",
+					"protocol": "https",
+					"host": [
+						"{{PLATFORM_URL}}"
+					],
+					"path": [
+						"data",
+						"foundation",
+						"sandbox-management",
+						""
+					],
+					"query": [
+						{
+							"key": null,
+							"value": null
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						},
+						{
+							"key": "offset",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

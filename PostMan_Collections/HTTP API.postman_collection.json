@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "56b4ec22-6d7d-43f9-97b2-bf6c5d067870",
+		"name": "HTTP API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProfile_HTTP_API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"header\": {\r\n    \"schemaRef\": {\r\n      \"id\": \"https://ns.adobe.com/cognizanttechnologys/schemas/a00e5d13f5af082de505adccb279d1778138c6191f7e8d13\",\r\n      \"contentType\": \"application/vnd.adobe.xed-full+json;version=1.0\"\r\n    },\r\n    \"imsOrgId\": \"D1D7123F524450A60A490D45@AdobeOrg\",\r\n    \"datasetId\": \"61e0bf662e41961949dbf01b\",\r\n    \"source\": {\r\n      \"name\": \"CTS Profile Streaming dataflow - 01/13/2022 7:12 PM\"\r\n    }\r\n  },\r\n  \"body\": {\r\n    \"xdmMeta\": {\r\n      \"schemaRef\": {\r\n        \"id\": \"https://ns.adobe.com/cognizanttechnologys/schemas/a00e5d13f5af082de505adccb279d1778138c6191f7e8d13\",\r\n        \"contentType\": \"application/vnd.adobe.xed-full+json;version=1.0\"\r\n      }\r\n    },\r\n    \"xdmEntity\": {\r\n      \"_cognizanttechnologys\": {\r\n        \"cts_identity_container\": {\r\n          \"email_id\": \"bob.martin@yahoo.com\",\r\n          \"mdm_id\": \"MDM10001\",\r\n          \"phone_no\": \"249-080-1001\"\r\n        }\r\n      },\r\n      \"homeAddress\": {\r\n        \"city\": \"Troy\",\r\n        \"country\": \"United States Of America\",\r\n        \"countryCode\": \"US\",\r\n        \"postalCode\": \"48084\",\r\n        \"state\": \"MI\",\r\n        \"stateProvince\": \"US-MI\",\r\n        \"status\": \"active\",\r\n        \"street1\": \"1980 Somerset Dr\",\r\n        \"street2\": \"APT 102\"\r\n      },\r\n      \"mobilePhone\": {\r\n        \"number\": \"249-080-1001\",\r\n        \"primary\": false,\r\n        \"status\": \"active\"\r\n      },\r\n      \"person\": {\r\n        \"birthDate\": \"1990-08-15\",\r\n        \"birthDayAndMonth\": \"15-08\",\r\n        \"birthYear\": 1990,\r\n        \"gender\": \"male\",\r\n        \"maritalStatus\": \"single\",\r\n        \"name\": {\r\n          \"courtesyTitle\": \"Mr\",\r\n          \"firstName\": \"Robert\",\r\n          \"fullName\": \"Robert Martin\",\r\n          \"lastName\": \"Martin\",\r\n          \"middleName\": \"\",\r\n          \"suffix\": \"\"\r\n        },\r\n        \"nationality\": \"US\",\r\n        \"taxId\": \"209-09-1234\"\r\n      },\r\n      \"personalEmail\": {\r\n        \"address\": \"bob.martin@yahoo.com\",\r\n        \"primary\": false,\r\n        \"status\": \"active\",\r\n        \"type\": \"personal\"\r\n      },\r\n      \"preferredLanguage\": \"en-GB\",\r\n      \"timeZone\": \"America/Barbados\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "https://dcs.adobedc.net/collection/180f0f65a2e718feb77089bf7e915b7ee8a7c41c208e23e9c0439bf0e108715d?synchronousValidation=true",
+					"protocol": "https",
+					"host": [
+						"dcs",
+						"adobedc",
+						"net"
+					],
+					"path": [
+						"collection",
+						"180f0f65a2e718feb77089bf7e915b7ee8a7c41c208e23e9c0439bf0e108715d"
+					],
+					"query": [
+						{
+							"key": "synchronousValidation",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
