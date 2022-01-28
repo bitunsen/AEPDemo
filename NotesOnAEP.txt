@@ -1,0 +1,37 @@
+Setup PostMan Collection for AEP
+
+To establish a secure service-to-service Adobe I/O API session, every request to an Adobe service must include in the Authorization header.
+
+Exchange your JWT for an Access Token through a POST request. This Access Token will have to be used in each header of your API requests.
+
+
+	1. Login into the https://developer.adobe.com and create a Project to enable "Experience Platform API"
+	2. Generate the public key and private key. 
+	3. Download the project file. It will be stored as a JSON file. Import this file as an environment in POSTMAN.
+	4. Use "Adobe I/O Access Token Generation" API to generate the ACCESS TOKEN. Below information is required to invoke this API:
+		Parameter	      Environment Variable
+		client_id	      API_KEY
+		client_secret	  CLIENT_SECRET
+		jwt_token	      JWT_TOKEN
+		
+    Please make sure that these environment variables are having correct values.
+		This API will return the ACCESS_TOKEN. Once you have the access token, please check if there is any environment variable named "ACCESS_TOKEN". If there is none, we have to create one and then put the access token as value of the environment variable. Otherwise, please update the value.
+
+
+Understand the CONTAINER_ID
+-----------------------------------------------
+Calls to the Schema Registry API require the use of a CONTAINER_ID. There are two containers against which API calls can be made: the global container and the tenant container.
+
+Global container
+The global container holds all standard Adobe and Experience Platform partner provided classes, schema field groups, data types, and schemas. You may only perform list and lookup (GET) requests against the global container.
+
+Tenant container
+Not to be confused with your unique TENANT_ID, the tenant container holds all classes, field groups, data types, schemas, and descriptors defined by an IMS Organization. These are unique to each organization, meaning they are not visible or manageable by other IMS Orgs. You may perform all CRUD operations (GET, POST, PUT, PATCH, DELETE) against resources that you create in the tenant container.
+
+From <https://experienceleague.adobe.com/docs/experience-platform/xdm/api/getting-started.html?lang=en> 
+
+To retrieve a custom Schema details, create an environment variable - CONTAINER_ID and set the value as "tenant".
+
+Go to "Schema Registry API" and execute "Retrieve a list of schemas withing a specific container".
+
+
